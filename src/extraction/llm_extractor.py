@@ -2,11 +2,20 @@
 # import pandas as pd
 import pdfplumber as pp
 
-invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
+def extract_text_from_pdf(invoice_pdf):
+    with pp.open(invoice_pdf) as pdf:
+        extracted_text = ""
+        for i,page in enumerate(pdf.pages):
+            text = page.extract_text()
+            extracted_text += text
+        return extracted_text
 
-with pp.open(invoice_pdf) as pdf:
-    for i,page in enumerate(pdf.pages):
-        text = page.extract_text()
-        print(f"---{i+1}---")
-        print(text)
+
+if __name__=="__main__":
+    invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
+    text = extract_text_from_pdf(invoice_pdf)
+    print(text)
+
+
+
 
