@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-api_KEY = os.getenv("GROQ_API_KEY")
+API_KEY = os.getenv("GROQ_API_KEY")
 
 def extract_text_from_pdf(invoice_pdf):
     with pp.open(invoice_pdf) as pdf:
