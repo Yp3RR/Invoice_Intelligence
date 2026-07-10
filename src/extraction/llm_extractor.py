@@ -16,7 +16,7 @@ def extract_text_from_pdf(invoice_pdf):
         return extracted_text
 
 def extract_invoice_fields(extracted_text):
-    
+    client = groq(api_key = API_KEY)
 
 
     
