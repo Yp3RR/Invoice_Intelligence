@@ -17,8 +17,6 @@ def extract_text_from_pdf(invoice_pdf):
 
 def extract_invoice_fields(extracted_text):
     client = groq(api_key = API_KEY)
-
-
     
 if __name__=="__main__":
     invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
