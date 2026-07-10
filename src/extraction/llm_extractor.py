@@ -23,6 +23,6 @@ def extract_invoice_fields(extracted_text):
 if __name__=="__main__":
     invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
     extracted_text = extract_text_from_pdf(invoice_pdf)
-    print(text)
+    print(extracted_text)
 
 
