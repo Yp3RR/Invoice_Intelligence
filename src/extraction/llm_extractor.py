@@ -23,16 +23,16 @@ def extract_invoice_fields(extracted_text):
         messages=[
             {
                 
-                "role" : "system"
+                "role" : "system",
                 "content" : "You are a data extraction bot. output valid raw JSON and dont include 
-                anything related to conversation"
+                anything related to conversation",
                 
             },
             {
                 
-                "role" : "user"
+                "role" : "user",
                 "content" : "You are given a raw data from an invoice in pdf format. extract all the
-                necessary fields"
+                necessary fields",
                 
             }
         ],
