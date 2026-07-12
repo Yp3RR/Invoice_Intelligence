@@ -35,9 +35,11 @@ def extract_invoice_fields(extracted_text):
                 necessary fields"
                 
             }
-        ]
+        ],
+        model = "llama-3.3-70b-versatile",
     )
 
+    print(chat_completion.choices[0].message.content)
     
 if __name__=="__main__":
     invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
