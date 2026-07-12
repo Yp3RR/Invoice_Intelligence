@@ -19,7 +19,14 @@ def extract_text_from_pdf(invoice_pdf):
 def extract_invoice_fields(extracted_text):
     client = Groq(api_key = API_KEY)
 
-    chat = client.chat.completions.create()
+    chat = client.chat.completions.create(
+        messages=[
+            {
+                "role" : "system"
+                "content" : "You are a data extraction bot"
+            }
+        ]
+    )
     
 if __name__=="__main__":
     invoice_pdf = "../../data/raw/invoice_Scot Coram_29686.pdf"
