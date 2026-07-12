@@ -25,13 +25,13 @@ def extract_invoice_fields(extracted_text):
                 
                 "role" : "system",
                 "content" : '''You are a data extraction bot. output valid raw JSON and 
-                dont include anything related toconversation''',
+                dont include anything related to conversation''',
                 
             },
             {
                 
                 "role" : "user",
-                "content" : '''You are given a raw data from an invoice in pdf format. extract all the
+                "content" : f'''{extracted_text} You are given a raw data from an invoice in pdf format. extract all the
                 necessary fields''',
                 
             }
