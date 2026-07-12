@@ -1,7 +1,8 @@
-# import numpy as np
+ # import numpy as np
 # import pandas as pd
 import pdfplumber as pp
 from dotenv import load_dotenv
+from groq import Groq
 import os
 
 load_dotenv()
