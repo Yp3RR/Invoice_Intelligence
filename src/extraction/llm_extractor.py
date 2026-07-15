@@ -32,7 +32,7 @@ def extract_invoice_fields(extracted_text):
                 
                 "role" : "user",
                 "content" : f'''{extracted_text} You are given a raw data from an invoice in pdf format. extract all the
-                necessary fields. if a field is missing return null.Amount is equal ''',
+                necessary fields. if a field is missing return null.Amount is equal to''',
                 
             }
         ],
